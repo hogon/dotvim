@@ -165,3 +165,5 @@ set printoptions=paper:A4, syntax:y
 
 nmap <silent> <c-n> :NERDTreeToggle<CR>
 
+command! Status echo "All systems are go!"
+
