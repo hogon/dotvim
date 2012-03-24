@@ -1,0 +1,36 @@
+/*
+ * Notations
+ * Classes's name begins by an upper case
+ * Attribute are members so begin by m_
+ *
+ */
+
+
+
+#include<iostream>
+#include<string>
+using namespace std;
+
+int main(int argc, const char *argv[])
+{
+	//declaration version du code
+	for(int i=0; i < argc; i++)
+	{
+	 	 if (i==0)
+		     printf("%3d - %s\n", i, argv[i]); // Print the 1st arg.
+		  if(i==1)
+		     {
+			     if(strcmp(argv[i],"--version")==0)
+			       cout << "This is version 1.0 " << endl;
+	             }
+	}
+	
+
+/************************************************************************/
+
+
+
+        // Outupt
+	system("mkdir -p output");		  
+	return 0;
+}
