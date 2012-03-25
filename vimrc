@@ -11,7 +11,10 @@ set mouse=a      " utilisation de la souris
 "set smartindent
 
 set cursorline   " pour colorer la ligne ou se trouve le curseur
-"hi CursorLine term=none cterm=none ctermbg=3      # adjust color
+"hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+
+hi CursorLine   cterm=bold
 
 set hidden
 set foldmethod=syntax " to use folding
