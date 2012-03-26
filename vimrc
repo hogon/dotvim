@@ -27,7 +27,6 @@ set foldmethod=syntax " to use folding
 
 "set modeline
 set laststatus=2    "this enable the status line show the status line
-
 " now set it up to change the status line based on mode
 if version >= 700
   au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
@@ -166,7 +165,7 @@ nmap <leader>l :set list!<CR>
 
  " Utilisation des taglist
  nnoremap <silent> <F8> :TlistToggle<CR>
- map <F7> :vertical wincmd f<CR>
+ "map <F7> :vertical wincmd f<CR>
 
 
  " To use copy paste with vim
@@ -183,9 +182,16 @@ nmap <leader>l :set list!<CR>
  set pdev=pdf
  set printoptions=paper:A4, syntax:y
 
- nmap <silent> <c-n> :NERDTreeToggle<CR>
+ nmap <silent> <F7> :NERDTreeToggle<CR>
 
  command! Status echo "All systems are go!"
 
 let Tlist_Use_Right_Window = 1
+
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set title                " change the terminal's title"
+
+
 
