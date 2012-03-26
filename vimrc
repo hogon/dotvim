@@ -1,4 +1,8 @@
 " vimrc de O. K.
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+
 set nocompatible
 syntax on
 "set background=dark
@@ -182,4 +186,5 @@ nmap <leader>l :set list!<CR>
 
  command! Status echo "All systems are go!"
 
+let Tlist_Use_Right_Window = 1
 
