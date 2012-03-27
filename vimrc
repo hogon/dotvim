@@ -94,12 +94,12 @@ set ai
 "filetype plugin indent on
 
 
-if has("gui_running")
-	 set fuoptions=maxvert,maxhorz
-	 au GUIEnter * set fullscreen
-	 else
-	let Tlist_Inc_Winwidth=0
-endif
+"if has("gui_running")
+"	 set fuoptions=maxvert,maxhorz
+"	 au GUIEnter * set fullscreen
+"	 else
+"	let Tlist_Inc_Winwidth=0
+"endif
 
 
 
@@ -193,5 +193,13 @@ set undolevels=1000      " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title                " change the terminal's title"
 
+" Show syntax highlighting groups for word under cursor
+nmap <C-S-P> :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
 
 
