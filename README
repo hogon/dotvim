@@ -13,6 +13,6 @@ Switch to the `~/.vim` directory, and fetch submodules:
 	git submodule init
 	git submodule update
 	git submodule foreach git pull origin master
-To install clew
+To install clewn
 	vimdir=$HOME/.vim  ./configure  --prefix=$HOME
 	make

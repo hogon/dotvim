@@ -1,0 +1,4 @@
+	// Gnuplot
+	GNUplot gp ;
+	gp.draw(x, y, N, " title ", "abscisee", "ordonnee" ) ;
+
