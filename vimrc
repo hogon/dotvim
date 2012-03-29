@@ -15,6 +15,7 @@ set incsearch    " activer la recherche actives, le texte cherché s'active lors
 set mouse=a      " utilisation de la souris
 "set smartindent
 
+
 set cursorline   " pour colorer la ligne ou se trouve le curseur
 "hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white

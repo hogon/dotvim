@@ -1,20 +1,30 @@
-" Vim color scheme
+" [O., K.]=0 color scheme
+
 "
-" Name:         blackboard.vim
-" Maintainer:   Ben Wyrosdick <ben.wyrosdick@gmail.com> 
-" Last Change:  20 August 2009
+" Name:         OK_scheme.vim
+" Maintainer:   O. K.
+" Last Change:  2012-03-29 Jeu 02:16 
 " License:      public domain
-" Version:      1.4
+" Version:      0.0
+
+
 
 set background=dark
-hi clear
+"highlight clear
 if exists("syntax_on")
-   syntax reset
+	syntax reset
 endif
+let g:colors_name = "Mali_Light"
 
-let g:colors_name = "blackboard"
+highlight vimString guifg=#009900
 
-if has("gui_running")
+" TODO: override default 'TODO' colors
+"highlight Todo guifg=#990000 guibg=NONE gui=NONE
+
+highlight htmlH1 guifg=#990000 guibg=NONE gui=NONE
+highlight link htmlH4 htmlH1
+"set cul cuc
+set number
   "GUI Colors
   highlight Normal guifg=White   guibg=#0B1022 ctermbg=233
   highlight Cursor guifg=Black   guibg=Yellow
@@ -40,16 +50,6 @@ if has("gui_running")
   highlight link htmlEndTag htmlTag
   highlight link htmlTagName htmlTag
 
-  "Ruby Colors
-  highlight link rubyClass Keyword
-  highlight link rubyDefine Keyword
-  highlight link rubyConstant Type
-  highlight link rubySymbol Constant
-  highlight link rubyStringDelimiter rubyString
-  highlight link rubyInclude Keyword
-  highlight link rubyAttribute Keyword
-  highlight link rubyInstanceVariable Normal
 
   "Rails Colors
   highlight link railsMethod Type
-end
