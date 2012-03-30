@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/ok/Dropbox/stagem2/source/src/OnQuantique/output'
 let g:netrw_dirhist_2='/Users/ok/Dropbox/stagem2/source/src/OnQuantique/output/data'
 let g:netrw_dirhist_3='/Users/ok/Dropbox/stagem2/source/src/OnQuantique/output/data/masse'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/Users/ok/dev/python/appengine/gkhasso'
 let g:netrw_dirhist_5='/Users/ok/.vim_ide'
 let g:netrw_dirhist_6='/Users/ok/Dropbox/stagem2/source/src/OnQuantique/output/data/masse'
 let g:netrw_dirhist_7='/Users/ok/.vim/script'
+let g:netrw_dirhist_8='/Users/ok/Dropbox/StageM2/source/src/OnQuantique/output/data/derivatives'
