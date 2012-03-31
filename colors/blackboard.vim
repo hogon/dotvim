@@ -8,23 +8,23 @@ endif
 
 let colors_name = "blackboard"
 
-hi Normal		guifg=#ffffff guibg=#0D1021						
+hi Normal		guifg=#ffffff ctermfg=15 guibg=#0D1021						 ctermbg=233
 
-hi Comment	    guifg=#aeaeae gui=italic 
-hi Constant	    guifg=#d7fa41 gui=none
-hi String       guifg=#64ce3e gui=none
-hi Statement    guifg=#f8de33 gui=none
-hi Entity       guifg=#fa6513 gui=none
-hi Support      guifg=#8fa6cd gui=none
-hi LineNr       guifg=#aeaeae guibg=#000000 gui=none 
-hi Title		guifg=#f6f3e8 guibg=NONE	gui=bold
-hi NonText 		guifg=#808080 guibg=#0D1021	gui=none
+hi Comment	    guifg=#aeaeae ctermfg=145 gui=italic 
+hi Constant	    guifg=#d7fa41 ctermfg=191 gui=none
+hi String       guifg=#64ce3e ctermfg=77 gui=none
+hi Statement    guifg=#f8de33 ctermfg=221 gui=none
+hi Entity       guifg=#fa6513 ctermfg=202 gui=none
+hi Support      guifg=#8fa6cd ctermfg=110 gui=none
+hi LineNr       guifg=#aeaeae ctermfg=145 guibg=#000000 ctermbg=0 gui=none 
+hi Title		guifg=#f6f3e8 ctermfg=7 guibg=NONE	gui=bold
+hi NonText 		guifg=#808080 ctermfg=244 guibg=#0D1021	gui=none ctermbg=233
 
 hi Visual       gui=reverse
-hi VertSplit    guifg=#444444 guibg=#444444
-hi StatusLine   guifg=#f6f3e8 guibg=#444444 gui=italic
-hi StatusLineNC guifg=#857b6f guibg=#444444
-hi SpecialKey	guifg=#808080 guibg=#343434 gui=none
+hi VertSplit    guifg=#444444 ctermfg=238 guibg=#444444 ctermbg=238
+hi StatusLine   guifg=#f6f3e8 ctermfg=7 guibg=#444444 ctermbg=238 gui=italic
+hi StatusLineNC guifg=#857b6f ctermfg=243 guibg=#444444 ctermbg=238
+hi SpecialKey	guifg=#808080 ctermfg=244 guibg=#343434 ctermbg=236 gui=none
 
 
 hi link Define          Entity

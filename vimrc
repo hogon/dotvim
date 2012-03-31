@@ -6,7 +6,7 @@ call pathogen#helptags()
 
 set nocompatible
 syntax on
-"set background=dark
+colorscheme OK_scheme 	 "OK_scheme My own colorsheme
 set number       " numeroter les lignes 
 set showcmd      " printer les commandes utilisées
 set ignorecase   " ignorer les minuscules et majuscules
