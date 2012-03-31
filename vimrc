@@ -139,7 +139,7 @@ nmap <leader>l :set list!<CR>
  filetype indent on
 
  " OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
- " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+ " 'plaintex' intead of 'tex', which results in vim-latex not being loaded.
  " The following changes the default filetype back to 'tex':
  let g:tex_flavor='latex'
 
@@ -195,6 +195,7 @@ set wildignore=*.swp,*.bak,*.pyc,*.class
 set title                " change the terminal's title"
 
 " Show syntax highlighting groups for word under cursor
+nmap <leader><F1> :call <SID>SynStack()<CR>
 nmap <C-S-P> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
   if !exists("*synstack")

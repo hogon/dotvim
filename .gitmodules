@@ -10,3 +10,6 @@
 [submodule "bundle/viki_vim"]
 	path = bundle/viki_vim
 	url = https://github.com/tomtom/viki_vim.git
+[submodule "bundle/javacomplete"]
+	path = bundle/javacomplete
+	url = https://github.com/vim-scripts/javacomplete.git

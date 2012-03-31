@@ -65,3 +65,8 @@ hi link Conditional     Statement
 hi link StorageClass    Statement
 hi link Operator        Statement
 hi link Statement       Statement
+
+"Viki highlight
+highlight vikiExtendedLink guifg=#00D42D ctermfg=40 gui=NONE
+highlight cBlock guifg=#00D42D ctermfg=50 gui=NONE
+highlight cType guifg=#00D42D ctermfg=10 gui=NONE
