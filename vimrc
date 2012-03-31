@@ -3,9 +3,12 @@ call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-
+"requirement for viki
 set nocompatible
+filetype plugin indent on
 syntax on
+autocmd BufRead,BufNewFile $HOME/dev/viki/* set filetype=viki
+
 colorscheme OK_scheme 	 "OK_scheme My own colorsheme
 set number       " numeroter les lignes 
 set showcmd      " printer les commandes utilisées
@@ -117,8 +120,9 @@ nmap <leader>l :set list!<CR>
 	 autocmd bufwritepost .vimrc source $MYVIMRC
  endif
 
- let mapleader = ","
+ "let mapleader = ","
  nmap <leader>v :tabedit $MYVIMRC<CR>
+ nmap <leader>mv :tabedit ~/dev/viki/StartPage.viki<CR>
 
 
  " set cc=132 " for fortran
@@ -178,6 +182,7 @@ nmap <leader>l :set list!<CR>
  autocmd FileType typoscript,zsh,sh let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "<")
  " don't auto-close <<>> pair in c file
  autocmd FileType c,cpp let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "<<")
+ autocmd FileType tex let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "'")
 
  " to print in pdf
  set pdev=pdf

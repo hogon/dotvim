@@ -11,7 +11,7 @@ highlight clear
 if exists("syntax_on")
 	syntax reset
 endif
-let g:colors_name = "Mali"
+let g:colors_name = "OK_scheme"
 
 "highlight vimString guifg=#009900 ctermfg=28
 " TODO: override default 'TODO' colors
