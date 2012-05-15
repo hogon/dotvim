@@ -9,6 +9,9 @@ filetype plugin indent on
 syntax on
 autocmd BufRead,BufNewFile $HOME/dev/viki/* set filetype=viki
 
+autocmd BufRead,BufNewFile *.gp,.gnuplot set filetype=gnuplot
+autocmd BufRead,BufNewFile *.plt set filetype=sh
+
 colorscheme OK_scheme 	 "OK_scheme My own colorsheme
 set number       " numeroter les lignes 
 set showcmd      " printer les commandes utilisées
@@ -20,10 +23,11 @@ set mouse=a      " utilisation de la souris
 
 
 set cursorline   " pour colorer la ligne ou se trouve le curseur
-"hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-"hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-
-hi CursorLine   cterm=bold
+"hi CursorLine   cterm=bold ctermbg=DarkRed 
+hi CursorLine   cterm=bold ctermbg=DarkRed guibg=DarkRed guifg=white
+"hi CursorLine   cterm=bold ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+"hi CursorLine   cterm=bold
 
 set hidden
 set foldmethod=syntax " to use folding
@@ -70,6 +74,10 @@ imap <F4> <Esc>:call ToggleSpell_french()<CR>a
 nmap ,s i\section{}<ESC>
 imap ,s \section{}
 
+nmap ,tt i#################################################################<ESC>
+imap ,tt #################################################################
+
+
 " To insert timestamp, press F3.
 nmap <F2> a<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
 imap <F2> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
@@ -98,12 +106,35 @@ set ai
 "filetype plugin indent on
 
 
-"if has("gui_running")
+set conceallevel=2
+hi Conceal   cterm=bold ctermbg=Black 
+"hi Conceal   cterm=bold ctermbg=Black ctermfg=white
+
+if has("gui_running")
 "	 set fuoptions=maxvert,maxhorz
 "	 au GUIEnter * set fullscreen
 "	 else
 "	let Tlist_Inc_Winwidth=0
-"endif
+"
+colorscheme default 
+" Set colorscheme, enable conceal (except for
+" subscripts/superscripts), and match conceal
+" highlight to colorscheme
+"let g:tex_conceal= 'adgm'
+"a = conceal accents/ligatures
+"d = conceal delimiters
+"g = conceal Greek
+"m = conceal math symbols
+"s = conceal superscripts/subscripts
+"syn match texGreek '\\eps\>' contained conceal cchar=ε
+"syn match texMathSymbol '\\arr\>' contained conceal cchar=←
+
+set conceallevel=2
+hi Conceal guibg=White guifg=DarkMagenta
+
+endif
+
+
 
 
 
@@ -152,6 +183,14 @@ nmap <leader>l :set list!<CR>
 
  " build tags of your own project with Ctrl-F12
  map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+ "let g:Tex_DefaultTargetFormat = 'pdf'
+ "let g:Tex_CompileRule_pdf = 'latexmk -pdf -pv $*'
+ "set iskeyword+=:
+ "let g:Tex_ViewRule_pdf = 'Skim'
+
+
+
 
  " OmniCppComplete
  let OmniCpp_NamespaceSearch = 1
@@ -209,4 +248,8 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-
+" To laod language tool for grammar checking
+"let g:languagetool_jar='/Users/ok/.vim/languagetool/dist/LanguageTool.jar'
+let g:languagetool_jar=$HOME . '/.vim/languagetool/LanguageTool.jar'
+":LanguageToolCheck
+":LanguageToolClear

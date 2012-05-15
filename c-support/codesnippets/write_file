@@ -1,0 +1,5 @@
+
+	string FileName;
+	FileName="";
+	fstream File(FileName.c_str(),ios::out);
+	File << " " << endl;
