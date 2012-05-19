@@ -71,8 +71,8 @@ endfunction
 nmap <F4> :call ToggleSpell_french()<CR>
 imap <F4> <Esc>:call ToggleSpell_french()<CR>a
 
-nmap ,s i\section{}<ESC>
-imap ,s \section{}
+"nmap ,s i\section{}<ESC>
+"imap ,s \section{}
 
 nmap ,tt i#################################################################<ESC>
 imap ,tt #################################################################
@@ -253,3 +253,22 @@ endfunc
 let g:languagetool_jar=$HOME . '/.vim/languagetool/LanguageTool.jar'
 ":LanguageToolCheck
 ":LanguageToolClear
+"
+"
+" Setting Thesaurus
+" we can edit a thesaurus file with either coma or space blanc
+" Usage ctrl x + ctrl t
+set thesaurus+=$HOME/.vim/thesaurus/mythesaurus.txt
+set thesaurus+=$HOME/.vim/thesaurus/functions.txt
+set thesaurus+=$HOME/.vim/thesaurus/mthesaur.txt
+"set iskeyword+=32-127,^,
+
+" Setting the dictionary
+" to use it ctrl-x + ctrl-k
+set dictionary+=/usr/share/dict/words
+"buffer word completion ctrl x p or n
+"buffer line completion ctrl x l
+"file completion ctrl x f
+"
+"To use the Most Recently Used files
+let MRU_Max_Entries = 20
