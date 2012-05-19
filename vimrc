@@ -272,3 +272,4 @@ set dictionary+=/usr/share/dict/words
 "
 "To use the Most Recently Used files
 let MRU_Max_Entries = 20
+let MRU_Include_Files = '^/Users/ok/Dropbox/StageM2/report/.*'
