@@ -264,12 +264,17 @@ set thesaurus+=$HOME/.vim/thesaurus/mthesaur.txt
 "set iskeyword+=32-127,^,
 
 " Setting the dictionary
+"set filetype on
+"au FileType * exec("setlocal dictionary+=".$HOME."/.vim/dictionaries/".expand('<amatch>'))
 " to use it ctrl-x + ctrl-k
+set dictionary+=~/.vim/ftplugin/latex-suite/dictionaries/SIunits
+set dictionary+=~/.vim/ftplugin/latex-suite/dictionaries/dictionary
 set dictionary+=/usr/share/dict/words
+set complete+=k   "to add dict completion to ctrl+p,n completion 
 "buffer word completion ctrl x p or n
 "buffer line completion ctrl x l
 "file completion ctrl x f
 "
 "To use the Most Recently Used files
 let MRU_Max_Entries = 20
-let MRU_Include_Files = '^/Users/ok/Dropbox/StageM2/report/.*'
+"let MRU_Include_Files = '^/Users/ok/Dropbox/StageM2/report/.*'
