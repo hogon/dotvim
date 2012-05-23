@@ -183,6 +183,8 @@ nmap <leader>l :set list!<CR>
 
  " build tags of your own project with Ctrl-F12
  map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+let tlist_tex_settings='latex;s:sections;g:graphics;l:labels'
+let tlist_make_settings='make;m:makros;t:targets'
 
  "let g:Tex_DefaultTargetFormat = 'pdf'
  "let g:Tex_CompileRule_pdf = 'latexmk -pdf -pv $*'

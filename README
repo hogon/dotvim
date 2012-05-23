@@ -14,6 +14,12 @@ Switch to the `~/.vim` directory, and fetch submodules:
 	git submodule update
 	git submodule foreach git pull origin master
 
+Congratulations your installation is done !
+
+
+The following is optional.
+ Clewn may be helpful if you would like to get GNU Debugger access directly from your Vim.
+
 To install clewn
 	vimdir=$HOME/.vim  ./configure  --prefix=$HOME
 	make
@@ -24,7 +30,7 @@ To install clewn
 	$ path/to/MacVim.app/Contents/MacOS/Vim -g -nb:localhost:3219
 	Use C-n for "next", S for "step", F for "finish" etc,   See ":h clewn" for more info. 
 
-
+rgb2cterm is helpful is you would like to to have color of the hexadecimal color code.
 To install rgb2cterm
 	ln -s $HOME/.vim/script/Vim-toCterm/rgb2cterm $HOME/scripts/rgb2cterm
 	in scheme source, :so <path to Vim-toCterm>/tocterm.vim
