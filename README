@@ -30,7 +30,7 @@ To install clewn
 	$ path/to/MacVim.app/Contents/MacOS/Vim -g -nb:localhost:3219
 	Use C-n for "next", S for "step", F for "finish" etc,   See ":h clewn" for more info. 
 
-rgb2cterm is helpful is you would like to to have color of the hexadecimal color code.
+rgb2cterm is helpful if you would like to to have color of the hexadecimal color code.
 To install rgb2cterm
 	ln -s $HOME/.vim/script/Vim-toCterm/rgb2cterm $HOME/scripts/rgb2cterm
 	in scheme source, :so <path to Vim-toCterm>/tocterm.vim
