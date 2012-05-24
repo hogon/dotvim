@@ -1,0 +1,29 @@
+
+
+The following is optional.
+To  update the plugins (installed with pathogen)
+Switch to the `~/.vim` directory, and fetch submodules:
+
+	cd ~/.vim
+	git submodule init
+	git submodule update
+	git submodule foreach git pull origin master
+
+
+ Clewn may be helpful if you would like to get GNU Debugger access directly from your Vim.
+
+To install clewn
+	vimdir=$HOME/.vim  ./configure  --prefix=$HOME
+	make
+	from : https://groups.google.com/group/vim_mac/browse_thread/thread/1a7b591e69635357?pli=1
+	-I/opt/local/include to Makefile DEFAULT_INCLUDES on line 63
+	-L/opt/local/lib to LDFLAGS on line 119
+	$ clewn -ga './executable' 
+	$ path/to/MacVim.app/Contents/MacOS/Vim -g -nb:localhost:3219
+	Use C-n for "next", S for "step", F for "finish" etc,   See ":h clewn" for more info. 
+
+rgb2cterm is helpful if you would like to to have color of the hexadecimal color code.
+To install rgb2cterm
+	ln -s $HOME/.vim/script/Vim-toCterm/rgb2cterm $HOME/scripts/rgb2cterm
+	in scheme source, :so <path to Vim-toCterm>/tocterm.vim
+	see https://github.com/shawncplus/Vim-toCterm
